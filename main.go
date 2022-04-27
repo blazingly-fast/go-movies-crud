@@ -33,11 +33,11 @@ func main() {
     Title: "Movie one",
     Director: &Director:{Firstname:"Miro", Lastname:"Tamica"}})
 
-  movies = append(movies, Movie{
-    ID: "2",
-    Isbn: "426590",
-    Title: "Movie two", 
-    Director: &Director: {Firstname: "Limo", Lastname: "Svetlic"}})
+	movies = append(movies, Movie{
+		ID:       "2",
+		Isbn:     "426590",
+		Title:    "Movie two",
+		Director: &Director{Firstname: "Limo", Lastname: "Svetlic"}})
 
 	r.HandleFunc("/movies", getMovies).Methods("GET")
 	r.HandleFunc("/movies/{id}", getMovie).Methods("GET")
